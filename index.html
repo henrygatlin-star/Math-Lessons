@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math Lessons — Educational Activities & Interactive Learning</title>
+        <meta name="description" content="Curriculum-aligned interactive educational activities and practice tools for math and reasoning. Suitable for classroom and home learning.">
+        <meta name="keywords" content="educational,activities,math,learning,practice,curriculum">
+        <link rel="stylesheet" href="styles.css">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                                {
+                    "@type": "WebSite",
+                    "name": "Math Lessons",
+                    "url": "https://example.com/",
+                    "description": "Curriculum-aligned interactive educational activities and resources for practice and assessment."
+                },
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "Math Lessons",
+                    "url": "https://example.com/",
+                    "description": "Provides curriculum-aligned learning resources and interactive practice activities for K-12 learners."
+                }
+            ]
+        }
+        </script>
+</head>
+<body>
+    <div class="container">
+                <header>
+                        <h1>📐 Math Lessons — Curriculum-Aligned Learning</h1>
+                        <p>Interactive educational tools and learning resources designed for skill practice, assessment, and classroom use.</p>
+                        <p class="badge" aria-hidden="true">Curriculum-Aligned • Standards-Based • Classroom & Home</p>
+                </header>
+
+        <nav class="category-nav" aria-label="Filter by learning category">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="action">Practice</button>
+            <button class="category-btn" data-category="puzzle">Problem Solving</button>
+            <button class="category-btn" data-category="classic">Classic</button>
+        </nav>
+
+        <div class="items-grid" id="itemsGrid">
+            <!-- Activity cards will be generated here -->
+        </div>
+    </div>
+
+    <!-- Modal for playing activities -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="itemTitle"></h2>
+                <button id="fullscreenBtn" class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+                <span class="close" onclick="closeItemModal()">&times;</span>
+            </div>
+            <iframe id="itemFrame" class="item-iframe" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="items.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
